@@ -1,9 +1,11 @@
 from django.urls import path
-from .views import RegisterUserView, CustomAuthToken, GenerateTACView, VerifyTACView
+from .views import SignUpView, SignInView, DashboardView, GenerateTANView, TransferView, TransactionListView
 
 urlpatterns = [
-    path('register/', RegisterUserView.as_view(), name='register'),
-    path('login/', CustomAuthToken.as_view(), name='login'),
-    path('generate-tac/', GenerateTACView.as_view(), name='generate-tac'),
-    path('verify-tac/', VerifyTACView.as_view(), name='verify-tac'),
+    path('signup/', SignUpView.as_view(), name='signup'),
+    path('signin/', SignInView.as_view(), name='signin'),
+    path('dashboard/<int:pk>/', DashboardView.as_view(), name='dashboard'),
+    path('generate_tan/<int:pk>/', GenerateTANView.as_view(), name='generate_tan'),
+    path('transfer/', TransferView.as_view(), name='transfer'),
+    path('transactions/<int:pk>/', TransactionListView.as_view(), name='transactions'),
 ]

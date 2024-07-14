@@ -1,9 +1,15 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class TAC(models.Model):
-    user_id = models.CharField(max_length=100)
-    tac_code = models.CharField(max_length=100)
-    created_at = models.DateTimeField(auto_now_add=True)
+class User(AbstractUser):
+    email = models.EmailField(unique=True)
+    account_number = models.CharField(max_length=10, unique=True)
+    ifsc_code = models.CharField(max_length=11, default='TANBANK001')
+    balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    tans = models.JSONField(default=list)
 
-    def __str__(self):
-        return self.user_id
+class Transaction(models.Model):
+    sender = models.ForeignKey(User, related_name='sent_transactions', on_delete=models.CASCADE)
+    receiver = models.ForeignKey(User, related_name='received_transactions', on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    timestamp = models.DateTimeField(auto_now_add=True)
