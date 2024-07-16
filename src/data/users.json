@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Krishna",
+        "username": "krishna",
+        "email": "krishna@example.com",
+        "account": "123456",
+        "ifsc": "IFSC0001",
+        "balance": 1000,
+        "tan": "TAN001",
+        "password": "586686"
+    },
+    {
+        "name": "Jane Smith",
+        "username": "jane",
+        "email": "jane@example.com",
+        "account": "1234567891",
+        "ifsc": "IFSC0001",
+        "balance": 2000,
+        "tan": "TAN002",
+        "password": "password123"
+    },
+    {
+        "name": "Alice Johnson",
+        "username": "alice",
+        "email": "alice@example.com",
+        "account": "1234567892",
+        "ifsc": "IFSC0001",
+        "balance": 3000,
+        "tan": "TAN003",
+        "password": "password123"
+    },
+    {
+        "name": "Bob Brown",
+        "username": "bob",
+        "email": "bob@example.com",
+        "account": "1234567893",
+        "ifsc": "IFSC0001",
+        "balance": 4000,
+        "tan": "TAN004",
+        "password": "password123"
+    },
+    {
+        "name": "Charlie Davis",
+        "username": "charlie",
+        "email": "charlie@example.com",
+        "account": "1234567894",
+        "ifsc": "IFSC0001",
+        "balance": 5000,
+        "tan": "TAN005",
+        "password": "password123"
+    }
+]
